@@ -24,7 +24,7 @@
 % \setlength{\cftbeforepartskip}{20pt}
 % \setlength{\cftbeforesecskip}{8pt}
 % \setlength{\cftbeforesubsecskip}{3pt}
-% \setlist{nosep} 
+\setlist{nosep} 
 
 % BibLaTeX
 \usepackage[
@@ -52,13 +52,19 @@
 
 \maketitle
 
+%% Abstract
 % \begin{abstract}
+%     \noindent 
 %     Some Abstract
 % \end{abstract}
 
 % \renewcommand{\contentsname}{Alternative Table of Contents Heading}
 \tableofcontents
 
+%% Unnumered
+% \addcontentsline{toc}{section}{Preliminary Remarks}
+% \addcontentsline{toc}{section}{\protect\numberline{}Preliminary Remarks} % Align with numbered lines in ToC
+% \section{Preliminary Remarks}
 
 \section{Exposition}
 \section{Conclusion}
