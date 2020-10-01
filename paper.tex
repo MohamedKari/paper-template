@@ -1,0 +1,99 @@
+\documentclass[
+    headings=standardclasses,
+    DIV=15
+]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{pdfpages}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{tocloft}
+\usepackage{parskip}
+\usepackage{amstext}
+\usepackage[hang,flushmargin]{footmisc}
+\usepackage{totcount}
+
+%% Prerequisites for Number of References
+
+%% Font
+% \KOMAoption{fontsize}{11pt}
+% \usepackage[default]{opensans}
+
+%% Spacing
+% \setlength{\cftbeforepartskip}{20pt}
+% \setlength{\cftbeforesecskip}{8pt}
+% \setlength{\cftbeforesubsecskip}{3pt}
+% \setlist{nosep} 
+
+% BibLaTeX
+\usepackage[
+    citestyle=authoryear-ibid,
+    bibstyle=authortitle,
+    giveninits=true,
+    maxcitenames=2,
+    maxbibnames=10
+    ]{biblatex}
+\addbibresource{references.bib}
+\DefineBibliographyStrings{ngerman}{
+   andothers = {{et\,al\adddot}},
+}
+\newtotcounter{citenum}
+\AtEveryBibitem{\stepcounter{citenum}}
+
+%% Title Data
+\title{Some title}
+\subtitle{Some subtitle}
+\author{Mohamed Kari}
+\date{} % \date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+% \begin{abstract}
+%     Some Abstract
+% \end{abstract}
+
+% \renewcommand{\contentsname}{Alternative Table of Contents Heading}
+\tableofcontents
+
+
+\section{Exposition}
+\section{Conclusion}
+
+
+% \footnote{ImageNet-1k-Datensatz, Nvidia M40 GPU, $n_{\text{epochs}}=90$, $n_{\text{batchsize}}=32$} 
+
+%% Itemize environment
+% \begin{itemize}[label=-]
+%    \item an item
+% \end{itemize}
+
+
+%% Figure environment
+% \begin{figure}[t]
+%     \includegraphics[trim={20pt 20pt 20pt 20pt}, clip, width=\linewidth-10pt]{placeholder.png}
+%     \caption{Vorläufige Gliederung der Arbeit}
+%     \label{fig:placeholder}
+% \end{figure}
+% 
+% Abbildung~\ref{fig:placeholder} zeigt einen Placeholder.
+
+
+%% References
+% \autocite{}, \textcite{}
+% 
+\clearpage
+\printbibliography
+
+%% Print Number of References, see 'Prerequisites for Number of References‘
+% \emph{Number of references:} \total{citenum}
+
+\end{document}
+
+\begin{comment}
+% Backlog
+
+\end{comment}
